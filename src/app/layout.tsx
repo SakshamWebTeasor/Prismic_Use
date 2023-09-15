@@ -1,8 +1,25 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Nunito, Nunito_Sans } from 'next/font/google'
+import clsx from 'clsx' // for handeling multiple font.class in single className
 
-const inter = Inter({ subsets: ['latin'] })
+// found from https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  display: 'swap',
+})
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  variable: '--font-nunito-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}> {/** we may use => className={`${inter.variable} ${roboto_mono.variable}`} */}
+      <body>{children}</body> {/** incase single direclty use => inter.className */}
     </html>
   )
 }
