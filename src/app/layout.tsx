@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Inter, Nunito, Nunito_Sans } from 'next/font/google'
 import clsx from 'clsx' // for handeling multiple font.class in single className
 import { createClient } from '@/prismicio'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 // found from https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
 
@@ -24,12 +26,12 @@ const nunitoSans = Nunito_Sans({
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
-  const page = await client.getSingle("settings");
+  const settings = await client.getSingle("settings");
   return {
-    title: page.data.site_title || 'Prismic Use',
-    description: page.data.meta_description || 'Prismic Description Here',
+    title: settings.data.site_title || 'Prismic Use',
+    description: settings.data.meta_description || 'Prismic Description Here',
     openGraph: {
-      images: [page.data.og_image.url || ''],
+      images: [settings.data.og_image.url || ''],
     },
   }
 }
@@ -42,9 +44,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}> {/** we may use => className={`${inter.variable} ${roboto_mono.variable}`} */}
       <body>
-        <header>Header!</header>
+        <Header />
         {children}
-        <footer>Footer!</footer>
+        <Footer />
       </body> {/** incase single direclty use => inter.className */}
     </html>
   )
