@@ -45,3 +45,5 @@ Add To User Settings.json
 "editor.quickSuggestions": {
     "strings": true
 }
+
+npm run dev // to live debug and run code
