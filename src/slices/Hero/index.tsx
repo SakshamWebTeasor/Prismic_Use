@@ -22,7 +22,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <PrismicRichText field={slice.primary.body} components={{
         paragraph: ({children}) => (<p className="text-2xl text-center font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 max-w-md" >{children}</p>)
       }} />
-      <PrismicNextLink field={slice.primary.button_link}>{slice.primary.button_text}</PrismicNextLink>
+      <PrismicNextLink field={slice.primary.button_link} className="block w-fit bg-cyan-700 hover:bg-cyan-800 transition-color duration-200 ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base"  >{slice.primary.button_text}</PrismicNextLink>
       <PrismicNextImage field={slice.primary.image} />
     </section>
   );

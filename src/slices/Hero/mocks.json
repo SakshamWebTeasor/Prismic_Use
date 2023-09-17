@@ -22,8 +22,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Mollit ad sit fugiat aliquip duis duis. Duis ut sint laboris pariatur incididunt mollit duis fugiat ea laboris consequat et nostrud nostrud amet. Eu consectetur excepteur irure aliqua occaecat aliquip esse."
-						}
+							"text": "Mollit ad sit fugiat aliquip duis duis. Duis ut sint laboris pariatur incididunt mollit duis fugiat ea laboris consequat et nostrud nostrud amet. Eu consectetur excepteur irure aliqua occaecat aliquip esse. here.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
