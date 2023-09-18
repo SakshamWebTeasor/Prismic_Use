@@ -3,7 +3,7 @@ import { createClient } from '@/prismicio'
 import { PrismicNextLink } from '@prismicio/next';
 import Link from 'next/link';
 import Bounded from '@/components/Bounded';
-import Icon from '@/components/newLogo';
+import Icon from '@/components/icons/mainLogo';
 
 async function Header() {
     const client = createClient();

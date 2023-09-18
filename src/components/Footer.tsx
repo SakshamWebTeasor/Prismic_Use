@@ -2,7 +2,7 @@ import React from 'react'
 import { createClient } from '@/prismicio'
 import { PrismicNextLink } from '@prismicio/next';
 import Link from 'next/link';
-import Icon from '@/components/newLogo';
+import Icon from '@/components/icons/mainLogo';
 import Bounded from '@/components/Bounded';
 
 async function Footer() {
