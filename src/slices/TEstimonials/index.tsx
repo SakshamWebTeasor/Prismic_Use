@@ -29,8 +29,6 @@ const TEstimonials = async ({ slice }: TEstimonialsProps): Promise<JSX.Element> 
       }
     })
   );
-  console.log('')
-  console.log('testimonials', testimonials)
   return (
     <Bounded
       data-slice-type={slice.slice_type}
