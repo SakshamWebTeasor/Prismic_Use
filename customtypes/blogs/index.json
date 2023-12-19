@@ -1,17 +1,16 @@
 {
-  "id": "home_page",
-  "label": "Home Page",
+  "id": "blogs",
+  "label": "Blogs",
   "format": "page",
-  "repeatable": false,
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "Text",
+      "uid": {
         "config": {
-          "label": "Title",
-          "placeholder": ""
-        }
+          "label": "UID"
+        },
+        "type": "UID"
       },
       "slices": {
         "type": "Slices",
@@ -19,21 +18,6 @@
         "config": {
           "choices": {
             "blog": {
-              "type": "SharedSlice"
-            },
-            "call_to_action": {
-              "type": "SharedSlice"
-            },
-            "text_with_image": {
-              "type": "SharedSlice"
-            },
-            "features": {
-              "type": "SharedSlice"
-            },
-            "t_estimonials": {
-              "type": "SharedSlice"
-            },
-            "hero": {
               "type": "SharedSlice"
             }
           }
