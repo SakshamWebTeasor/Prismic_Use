@@ -12,7 +12,7 @@ const Blog = ({ slice }: BlogProps): JSX.Element => {
   return (
     <section className="max-w-3xl lg:max-w-6xl mx-auto py-8 px-4">
       <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 light:bg-slate-800">
-        <div className={`lg:flex${isImgRight ? "-row-reverse" : ""}`}>
+        <div className={`lg:flex`}>
           {slice.variation !== "imgRight" && (
             <div className="lg:w-1/2 flex">
               <PrismicNextImage
@@ -59,10 +59,10 @@ const Blog = ({ slice }: BlogProps): JSX.Element => {
             </blockquote>
           </div>
           {isImgRight && (
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 flex">
               <PrismicNextImage
                 field={blogimage}
-                className="w-full h-full object-cover lg:h-auto lg:object-none rounded-xl lg:rounded-none"
+                className="mx-3 my-3 w-11/12 h-full object-cover lg:h-auto lg:object-cover rounded-xl"
               />
             </div>
           )}
